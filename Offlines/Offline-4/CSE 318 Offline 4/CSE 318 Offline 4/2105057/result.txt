@@ -1,0 +1,219 @@
+Decision Tree Learning Algorithm
+Datasets loaded successfully!
+Iris dataset: 150 examples
+Adult dataset: 30162 examples
+
+============================================================
+SINGLE RUN COMPARISON - IRIS
+============================================================
+Dataset: Iris
+Training examples: 120
+Test examples: 30
+
+Criterion  MaxDepth Accuracy   Nodes    TreeDepth
+--------------------------------------------------
+IG         0        0.933      11       4
+IG         1        0.567      3        1
+IG         2        0.900      5        2         
+IG         3        0.933      9        3
+IG         4        0.933      11       4
+IG         5        0.933      11       4
+IG         6        0.933      11       4
+IG         7        0.933      11       4
+IG         8        0.933      11       4
+IG         9        0.933      11       4
+IG         10       0.933      11       4
+
+IGR        0        0.933      11       4
+IGR        1        0.567      3        1
+IGR        2        0.900      5        2
+IGR        3        0.933      9        3
+IGR        4        0.933      11       4
+IGR        5        0.933      11       4
+IGR        6        0.933      11       4
+IGR        7        0.933      11       4
+IGR        8        0.933      11       4
+IGR        9        0.933      11       4
+IGR        10       0.933      11       4
+
+NWIG       0        0.933      11       4
+NWIG       1        0.567      3        1
+NWIG       2        0.900      5        2
+NWIG       3        0.933      9        3
+NWIG       4        0.933      11       4
+NWIG       5        0.933      11       4         
+NWIG       6        0.933      11       4
+NWIG       7        0.933      11       4
+NWIG       8        0.933      11       4
+NWIG       9        0.933      11       4
+NWIG       10       0.933      11       4
+
+
+ANALYSIS - WITHOUT PRUNING (MaxDepth = 0):
+--------------------------------------------------
+Criterion  Accuracy   Nodes    TreeDepth
+----------------------------------------
+IG         0.933      11       4
+IGR        0.933      11       4
+NWIG       0.933      11       4
+
+============================================================
+SINGLE RUN COMPARISON - ADULT
+============================================================
+Dataset: Adult
+Training examples: 24129
+Test examples: 6033
+
+Criterion  MaxDepth Accuracy   Nodes    TreeDepth
+--------------------------------------------------
+IG         0        0.820      7098     13        
+IG         1        0.744      7        1
+IG         2        0.822      75       2
+IG         3        0.836      379      3
+IG         4        0.835      969      4
+IG         5        0.837      1763     5
+IG         4        0.835      969      4 
+IG         5        0.837      1763     5 
+IG         6        0.840      2617     6 
+IG         7        0.829      3480     7 
+IG         8        0.827      4328     8 
+IG         9        0.822      5106     9 
+IG         10       0.821      5803     10
+
+IGR        0        0.831      6257     14
+IGR        1        0.788      3        1 
+IGR        2        0.788      12       2 
+IGR        3        0.837      30       3 
+IGR        4        0.837      73       4 
+IGR        5        0.835      367      5 
+IGR        6        0.841      725      6 
+IGR        6        0.841      725      6
+IGR        7        0.843      1028     7
+IGR        8        0.842      1407     8
+IGR        9        0.840      1949     9
+IGR        10       0.837      2735     10
+
+NWIG       0        0.835      7106     14
+NWIG       1        0.788      3        1
+NWIG       2        0.788      7        2
+NWIG       3        0.799      19       3
+NWIG       4        0.838      49       4
+NWIG       5        0.842      115      5
+NWIG       6        0.845      299      6
+NWIG       7        0.847      653      7
+NWIG       8        0.846      1341     8
+NWIG       9        0.845      2318     9
+NWIG       10       0.837      3564     10        
+
+
+ANALYSIS - WITHOUT PRUNING (MaxDepth = 0):
+--------------------------------------------------
+Criterion  Accuracy   Nodes    TreeDepth
+----------------------------------------
+IG         0.820      7098     13        
+IGR        0.831      6257     14
+NWIG       0.835      7106     14
+
+============================================================
+EXPERIMENTS COMPLETED!
+============================================================
+
+
+
+============================================================
+EXPERIMENT: IG with MaxDepth=3 on Iris
+============================================================
+Running 20 experiments...
+Completed 5/20 runs
+Completed 10/20 runs
+Completed 15/20 runs
+Completed 20/20 runs
+
+RESULTS:
+----------------------------------------
+Dataset: Iris
+Criterion: IG
+Max Depth: 3
+Number of runs: 20
+
+Average Accuracy: 0.950
+Min Accuracy: 0.833
+Max Accuracy: 1.000
+Average Nodes: 7.0
+Average Tree Depth: 2.7
+
+INDIVIDUAL RUN RESULTS:
+----------------------------------------
+Run  Accuracy   Nodes    TreeDepth
+-----------------------------------
+1    1.000      5        2
+2    0.933      7        3
+3    0.933      7        3
+4    0.933      9        3
+5    0.933      7        3
+6    1.000      5        2
+7    0.967      5        2
+8    1.000      5        2
+9    1.000      9        3
+10   1.000      5        2
+11   0.933      7        3
+12   0.833      7        3
+13   0.933      5        2
+14   0.933      7        3
+15   0.933      9        3         
+16   1.000      9        3
+17   0.900      9        3
+18   0.867      9        3
+19   1.000      5        2
+20   0.967      9        3
+
+============================================================
+EXPERIMENT: IG with MaxDepth=3 on Adult
+============================================================
+Running 20 experiments...
+Completed 5/20 runs
+Completed 10/20 runs
+Completed 15/20 runs
+Completed 20/20 runs
+
+RESULTS:
+----------------------------------------
+Dataset: Adult
+Criterion: IG
+Max Depth: 3
+Number of runs: 20
+
+Average Accuracy: 0.837
+Min Accuracy: 0.830
+Max Accuracy: 0.844
+Average Nodes: 337.4
+Average Tree Depth: 3.0
+
+INDIVIDUAL RUN RESULTS:
+----------------------------------------
+Run  Accuracy   Nodes    TreeDepth
+-----------------------------------
+1    0.837      324      3
+2    0.841      376      3
+3    0.834      301      3
+4    0.844      418      3
+5    0.835      351      3
+6    0.840      336      3
+7    0.838      324      3
+8    0.830      343      3
+9    0.832      297      3
+10   0.836      318      3
+11   0.832      344      3
+12   0.841      282      3
+13   0.833      342      3
+14   0.844      333      3
+15   0.839      333      3
+16   0.835      358      3
+17   0.842      390      3
+18   0.834      357      3
+19   0.839      305      3
+20   0.837      315      3
+
+============================================================
+EXPERIMENTS COMPLETED!
+============================================================
